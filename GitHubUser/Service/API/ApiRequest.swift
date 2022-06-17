@@ -53,7 +53,7 @@ extension ApiRequest {
         var headers = [String:String]()
         headers["Content-Type"] = "application/json; charset=utf-8"
         headers["time-zone"] = TimeZone.current.identifier
-        headers["Authorization"] = Please input your GitHub Personal Access Token here. From Developer Setting menu
+        headers["Authorization"] = // Please input your GitHub Personal Access Token here. From Developer Setting menu, we can use github public api as Guest but it will be limited
 
         return headers
     }

@@ -22,7 +22,10 @@ class ImageDownloader: NSObject {
     lazy var downloadPool: OperationQueue = {
         var queue = OperationQueue()
         queue.name = "IMAGE_DOWNLOADER_DOWNLOAD_POOL"
-        queue.maxConcurrentOperationCount = 1
+        // I use this 3 concurrent operations for better performance
+        // We can it to one by one img downloading here, set it to 1
+        // But it is quite slow to finish all list img
+        queue.maxConcurrentOperationCount = 3
         return queue
     }()
     
@@ -45,10 +48,7 @@ class ImageDownloader: NSObject {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                //                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 Logger.error("IMAGE_DOWNLOADER", nserror.localizedDescription, #fileID, #line)
             }
         }

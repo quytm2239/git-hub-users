@@ -81,25 +81,29 @@ struct ApiClient {
                     return
                 }
                 do {
-                    let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
+                    // For logging purpose
+//                    let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
                     let response = try JSONDecoder().decode(ErrorResponse.self, from: data ?? Data())
                     let error = CommonError.serverError(message: response)
                     
                     completionHandler(.failure(error))
 
                 } catch let error {
-                    let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
+                    // For logging purpose
+                    // let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
                     completionHandler(.failure(.custom(message: error.localizedDescription)))
 
                 }
             } else {
                 do {
-                    let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
+                    // For logging purpose
+                    // let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
                     let response = try JSONDecoder().decode(T.self, from: data ?? Data())
                     completionHandler(.success(response))
 
                 } catch let error {
-                    let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
+                    // For logging purpose
+                    // let dict = try? JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String : Any]
                     completionHandler(.failure(.invalidJSON(error)))
                 }
             }
