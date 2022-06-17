@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserItem" representedClassName=".LUserItem" syncable="YES">
+        <attribute name="avatarUrl" attributeType="String" defaultValueString=""/>
+        <attribute name="bio" optional="YES" attributeType="String"/>
+        <attribute name="blog" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="followers" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="following" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isProfileLoaded" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isSeen" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="login" attributeType="String" defaultValueString=""/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String" maxValueString="300"/>
+        <attribute name="repoUrl" optional="YES" attributeType="String"/>
+        <attribute name="siteAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="twitterUsername" optional="YES" attributeType="String"/>
+        <attribute name="type" attributeType="String" defaultValueString="User"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="userId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="userId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="UserItem" positionX="-54" positionY="-9" width="128" height="314"/>
+    </elements>
+</model>
