@@ -22,7 +22,7 @@ And my customerized `UI tree/UI holder` or like a `NavigationCenter`
 ## How to run
 It requires `XCode 13.0 or later` to run directly from source code. XCode 13 requires `macOS 11.3+`
 If your `XCode 13.0` is not available, you can change `deployment target` to lower iOS version.
-I let an error in code of file `**ApiRequest.swift**`, at **line 56**. Please create a `Personal Access Token`(PAT) of your GitHub account to use GitHub user's api.
+I let an error in code of file `ApiRequest.swift`, at **line 56**. Please create a `Personal Access Token`(PAT) of your GitHub account to use GitHub user's api.
 **We can use this api as guest but it will be limited**. Check this [link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for how to make a PAT.
 
 ## Contribution
