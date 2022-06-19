@@ -12,13 +12,6 @@ enum HTTPMethod: String {
 }
 
 extension URLRequest {
-    /// Creates an instance with the specified `url`, `method`, and `headers`.
-    ///
-    /// - Parameters:
-    ///   - url:     The `URLConvertible` value.
-    ///   - method:  The `HTTPMethod`.
-    ///   - headers: The `HTTPHeaders`, `nil` by default.
-    /// - Throws:    Any error thrown while converting the `URLConvertible` to a `URL`.
     init(url: URL, method: HTTPMethod, headers: [String: String] = [:]) {
 
         self.init(url: url)
